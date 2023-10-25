@@ -4,7 +4,6 @@ class UsersController < ApplicationController
   end
 
   def create
-    require 'pry'; binding.pry
     user = user_params
     user[:username] = user[:username].downcase
     new_user = User.create(user)
